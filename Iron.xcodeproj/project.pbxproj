@@ -12,6 +12,7 @@
 		371FD3FF245DC75B001591C6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371FD3FD245DC75B001591C6 /* MainMenu.xib */; };
 		371FD40B245DC75B001591C6 /* IronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FD40A245DC75B001591C6 /* IronTests.swift */; };
 		371FD416245DC75B001591C6 /* IronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FD415245DC75B001591C6 /* IronUITests.swift */; };
+		371FD424245DC7D0001591C6 /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FD423245DC7D0001591C6 /* Rendering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,9 @@
 		371FD411245DC75B001591C6 /* IronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FD415245DC75B001591C6 /* IronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronUITests.swift; sourceTree = "<group>"; };
 		371FD417245DC75B001591C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		371FD423245DC7D0001591C6 /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
+		371FD425245DC7E0001591C6 /* Iron-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Iron-Bridging-Header.h"; sourceTree = "<group>"; };
+		371FD426245DC7E1001591C6 /* SharedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +99,13 @@
 			isa = PBXGroup;
 			children = (
 				371FD3F9245DC757001591C6 /* AppDelegate.swift */,
+				371FD423245DC7D0001591C6 /* Rendering.swift */,
+				371FD426245DC7E1001591C6 /* SharedTypes.h */,
 				371FD3FB245DC75B001591C6 /* Assets.xcassets */,
 				371FD3FD245DC75B001591C6 /* MainMenu.xib */,
 				371FD400245DC75B001591C6 /* Info.plist */,
 				371FD401245DC75B001591C6 /* Iron.entitlements */,
+				371FD425245DC7E0001591C6 /* Iron-Bridging-Header.h */,
 			);
 			path = Iron;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 				TargetAttributes = {
 					371FD3F5245DC757001591C6 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					371FD405245DC75B001591C6 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -251,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371FD424245DC7D0001591C6 /* Rendering.swift in Sources */,
 				371FD3FA245DC757001591C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Iron/Iron.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -427,6 +437,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngrid.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Iron/Iron-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -435,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Iron/Iron.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -447,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngrid.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Iron/Iron-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
