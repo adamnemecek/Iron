@@ -4,6 +4,10 @@
 
 #include "SharedTypes.h"
 
-struct MetalType {
+struct Vertex {
     int a;
+};
+
+struct Uniforms {
+
 };
